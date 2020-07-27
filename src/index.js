@@ -5,15 +5,10 @@ import Navigation from "./js/navigation";
 import Example from "./js/reactstrap-navbar";
 import Coffee from "./js/coffee";
 import * as serviceWorker from "./serviceWorker";
-import {
-  BrowserRouter,
-  Route,
-  useHistory,
-  hashHistory,
-} from "react-router-dom";
+import { BrowserRouter, Route, useHistory } from "react-router-dom";
 
 ReactDOM.render(
-  <BrowserRouter history={hashHistory}>
+  <BrowserRouter history={useHistory}>
     <Navigation />
     <Route exact path="/">
       <Coffee />
