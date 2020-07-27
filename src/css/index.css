@@ -1,0 +1,81 @@
+:root {
+  --gray: #ffff5c;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.empty-box {
+  height: 1000px;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  max-width: 100px;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--yellow);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-out;
+}
+
+.nav-link:hover:before {
+  visibility: visible;
+  left: 0;
+  transform: scaleX(1);
+}
+
+.dropdown-toggle::after {
+  animation-name: bounce;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.carousel {
+  margin-top: 55px;
+}
+
+.carousel-caption {
+  color: black;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  color: black;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.text-container {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
