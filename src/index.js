@@ -8,19 +8,23 @@ import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter, Route, useHistory } from "react-router-dom";
 
 ReactDOM.render(
-  <BrowserRouter history={useHistory}>
+  <div>
     <Navigation />
-    <Route exact path="/">
-      <Coffee />
+    <Coffee />
+  </div>
+  // <BrowserRouter history={useHistory}>
+  //   <Navigation />
+  //   <Route exact path="/">
+  //     <Coffee />
 
-      <div>
-        <div className="empty-box"></div>
-      </div>
-    </Route>
-    <Route path="/coffee">
-      <Coffee />
-    </Route>
-  </BrowserRouter>,
+  //     <div>
+  //       <div className="empty-box"></div>
+  //     </div>
+  //   </Route>
+  //   <Route path="/coffee">
+  //     <Coffee />
+  //   </Route>
+  // </BrowserRouter>,
   document.getElementById("root")
 );
 
