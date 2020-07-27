@@ -11,9 +11,10 @@ ReactDOM.render(
   <BrowserRouter>
     <Navigation />
     <Route exact path="/">
+      <Coffee />
+
       <div>
         <div className="empty-box"></div>
-        <Example />
       </div>
     </Route>
     <Route path="/coffee">
