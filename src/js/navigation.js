@@ -12,7 +12,7 @@ import {
   DropdownItem,
   DropdownMenu,
 } from "reactstrap";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router-dom";
 
 class Navigation extends Component {
   constructor() {
