@@ -33,7 +33,7 @@ class Navigation extends Component {
           <div className="container-fluid">
             <BrowserRouter basename="/">
               <Link to="/">
-                <NavbarBrand>Home</NavbarBrand>
+                <NavbarBrand>Homea</NavbarBrand>
               </Link>
 
               <NavbarToggler onClick={this.toggle} />
