@@ -17,8 +17,8 @@ import {
 
 ReactDOM.render(
   <div>
-    <Navigation />
-    <BrowserRouter basename="/react-publish" history={useHistory}>
+    {/* <Navigation /> */}
+    <BrowserRouter basename="/" history={useHistory}>
       <Switch>
         <Route exact path="/" component={Coffee}></Route>
 
