@@ -30,7 +30,7 @@ class Navigation extends Component {
       <section>
         <Navbar className="bg-secondary fixed-top" dark expand="md">
           <div className="container-fluid">
-            <NavbarBrand href="/">Home</NavbarBrand>
+            <NavbarBrand href="/react-publish">Home</NavbarBrand>
 
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>

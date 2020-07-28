@@ -8,6 +8,7 @@ import My404Component from "./js/my404Component";
 import * as serviceWorker from "./serviceWorker";
 import {
   BrowserRouter,
+  Link,
   Route,
   useHistory,
   Redirect,
@@ -17,24 +18,21 @@ import {
 ReactDOM.render(
   <div>
     <Navigation />
-
-    <BrowserRouter basename={process.env.PUBLIC_URL} history={useHistory}>
+    <BrowserRouter basename="/react-publish" history={useHistory}>
       <Switch>
-        <Route exact path="/">
-          <Coffee />
-        </Route>
+        <Route exact path="/" component={Coffee}></Route>
 
         <Route path="/coffee">
           <Switch>
-            <Route exact path="/coffee">
-              <Coffee />
-            </Route>
+            <Route exact path="/coffee" component={Coffee}></Route>
 
             <Route path={`/coffee/:styleName?`}>
               <Switch>
-                <Route exact path={`/coffee/:styleName?`}>
-                  <CoffeeStyle />
-                </Route>
+                <Route
+                  exact
+                  path={`/coffee/:styleName?`}
+                  component={CoffeeStyle}
+                ></Route>
 
                 <Route path="*">
                   <Redirect to="/404"></Redirect>
