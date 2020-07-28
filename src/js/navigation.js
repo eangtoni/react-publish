@@ -31,7 +31,7 @@ class Navigation extends Component {
       <section>
         <Navbar className="bg-secondary fixed-top" dark expand="md">
           <div className="container-fluid">
-            <BrowserRouter basename="/react-publish">
+            <BrowserRouter basename="/">
               <Link to="/">
                 <NavbarBrand>Homea</NavbarBrand>
               </Link>
