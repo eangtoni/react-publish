@@ -40,15 +40,15 @@ class Navigation extends Component {
                     Skills
                   </DropdownToggle>
                   <DropdownMenu right>
-                    <DropdownItem href="/">Test</DropdownItem>
-                    <DropdownItem href="/">Test123</DropdownItem>
+                    <DropdownItem href="/">Dummy</DropdownItem>
+                    <DropdownItem href="/">Dummy2</DropdownItem>
                   </DropdownMenu>
                 </UncontrolledDropdown>
                 <NavItem>
                   <NavLink href="/coffee">Coffee</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/">About</NavLink>
+                  <NavLink href="/about">About</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="/">Contact</NavLink>

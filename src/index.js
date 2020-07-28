@@ -2,29 +2,60 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./css/index.css";
 import Navigation from "./js/navigation";
-import Example from "./js/reactstrap-navbar";
-import Coffee from "./js/coffee";
+import Coffee, { CoffeeStyle } from "./js/coffee";
+import About from "./js/about";
+import My404Component from "./js/my404Component";
 import * as serviceWorker from "./serviceWorker";
-import { BrowserRouter, Route, useHistory } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  useHistory,
+  Redirect,
+  Switch,
+} from "react-router-dom";
 
 ReactDOM.render(
   <div>
     <Navigation />
-    <Coffee />
-  </div>,
-  // <BrowserRouter history={useHistory}>
-  //   <Navigation />
-  //   <Route exact path="/">
-  //     <Coffee />
 
-  //     <div>
-  //       <div className="empty-box"></div>
-  //     </div>
-  //   </Route>
-  //   <Route path="/coffee">
-  //     <Coffee />
-  //   </Route>
-  // </BrowserRouter>,
+    <BrowserRouter basename={process.env.PUBLIC_URL} history={useHistory}>
+      <Switch>
+        <Route exact path="/">
+          <Coffee />
+        </Route>
+
+        <Route path="/coffee">
+          <Switch>
+            <Route exact path="/coffee">
+              <Coffee />
+            </Route>
+
+            <Route path={`/coffee/:styleName?`}>
+              <Switch>
+                <Route exact path={`/coffee/:styleName?`}>
+                  <CoffeeStyle />
+                </Route>
+
+                <Route path="*">
+                  <Redirect to="/404"></Redirect>
+                </Route>
+              </Switch>
+            </Route>
+          </Switch>
+        </Route>
+
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/404">
+          <My404Component />
+        </Route>
+        <Route path="*">
+          <Redirect to="/404" />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+  </div>,
   document.getElementById("root")
 );
 

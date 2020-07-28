@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;700&display=swap");
+
 :root {
-  --gray: #ffff5c;
+  --brown: rgba(139, 69, 30, 0.8);
+  --font-family-Noto-sans: "Noto Sans JP", sans-serif;
 }
 
 body {
@@ -51,12 +54,22 @@ code {
   animation-direction: alternate;
 }
 
-.carousel {
+.carousel-container {
   margin-top: 55px;
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel-title {
+    font-size: 66px;
+  }
 }
 
 .carousel-caption {
   color: black;
+}
+
+.carousel-indicator li {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .carousel-control-prev-icon,
@@ -66,9 +79,38 @@ code {
   border-radius: 50%;
 }
 
+.layout-quote {
+  margin-top: 10%;
+  font-size: 36px;
+  color: grey;
+}
+
+.quote-left {
+  transform: translateY(-25px);
+}
+
+.quote-right {
+  transform: translateY(25px);
+}
+
 .text-container {
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.coffee-content {
+  background-color: var(--brown);
+}
+
+.coffee-content .layout-title {
+  font-family: var(--font-family-Noto-sans);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.coffee-content .layout-text {
+  font-family: var(--font-family-Noto-sans);
+  font-size: 20px;
 }
 
 @keyframes bounce {
@@ -78,4 +120,8 @@ code {
   to {
     transform: translateY(100%);
   }
+}
+
+.layout-about .layout-image {
+  border-radius: 50%;
 }
